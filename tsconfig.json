@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-     "baseUrl": "./",
+    "baseUrl": "./",
     "paths": {
-      "@/*":["src/*"]
+      "@/*": ["src/*"]
     },
     "useDefineForClassFields": true,
     "module": "ESNext",

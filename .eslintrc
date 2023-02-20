@@ -1,0 +1,18 @@
+{
+  "extends": ["@antfu"],
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "vue/require-v-for-key": "off",
+        "no-console": "off",
+        "vue/component-tags-order": [
+          "error",
+          {
+            "order": [["template", "script"], "style"]
+          }
+        ]
+      }
+    }
+  ]
+}

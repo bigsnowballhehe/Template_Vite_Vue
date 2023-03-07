@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
@@ -28,5 +28,19 @@ export default defineConfig(({ mode }) => ({
   },
   server: {
     port: 3000,
+  },
+  // If need
+  // build: {
+  //   outDir: mode,
+  //   assetsDir: '',
+  //   rollupOptions: {
+  //     output: {
+  //       entryFileNames: '[name].js',
+
+  //     },
+  //   },
+  // },
+  test: {
+    environment: 'jsdom',
   },
 }))

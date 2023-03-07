@@ -3,9 +3,9 @@
 </template>
 
 <script setup lang='ts'>
-const ext = $ref('test')
+const ext = $ref(1)
 const com = $computed(() => {
-  return `a${ext}`
+  return ext + 1
 })
 console.log('I am ExampleApp.vue')
 </script>

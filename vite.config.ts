@@ -6,7 +6,7 @@ import presetUno from '@unocss/preset-uno'
 import AutoImport from 'unplugin-auto-import/vite'
 import ReactivityTransform from '@vue-macros/reactivity-transform/vite'
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(() => ({
   base: './',
   plugins: [
     vue(),
@@ -23,9 +23,6 @@ export default defineConfig(({ mode }) => ({
     ReactivityTransform(),
   ],
   resolve: { alias: { '@': path.resolve(__dirname, 'src') } },
-  esbuild: {
-    drop: mode === 'production' ? ['console', 'debugger'] : [],
-  },
   server: {
     port: 3000,
   },

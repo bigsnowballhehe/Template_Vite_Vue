@@ -4,7 +4,6 @@ import vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import presetUno from '@unocss/preset-uno'
 import AutoImport from 'unplugin-auto-import/vite'
-import ReactivityTransform from '@vue-macros/reactivity-transform/vite'
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
   base: './',
@@ -20,7 +19,6 @@ export default defineConfig(() => ({
       vueTemplate: true,
       cache: true,
     }),
-    ReactivityTransform(),
   ],
   resolve: { alias: { '@': path.resolve(__dirname, 'src') } },
   server: {

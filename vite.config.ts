@@ -10,8 +10,7 @@ export default defineConfig(() => ({
   plugins: [
     vue(),
     UnoCSS({
-      presets: [presetUno(),
-      ],
+      presets: [presetUno()],
     }),
     AutoImport({
       imports: ['vue'],

@@ -23,17 +23,16 @@ export default defineConfig(() => ({
   server: {
     port: 3000,
   },
-  // If need
-  // build: {
-  //   outDir: mode,
-  //   assetsDir: '',
-  //   rollupOptions: {
-  //     output: {
-  //       entryFileNames: '[name].js',
-
-  //     },
-  //   },
-  // },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        // 生产环境时移除console
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  },
   test: {
     environment: 'jsdom',
   },

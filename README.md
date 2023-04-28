@@ -1,2 +1,2 @@
-# Vite-Vue-Template
+# Vue-Ts-Starter
 - fork from @antfu 

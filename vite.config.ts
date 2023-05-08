@@ -5,7 +5,7 @@ import UnoCSS from 'unocss/vite'
 import presetUno from '@unocss/preset-uno'
 import AutoImport from 'unplugin-auto-import/vite'
 // https://vitejs.dev/config/
-export default defineConfig(() => ({
+export default defineConfig(({ mode }) => ({
   base: './',
   plugins: [
     vue(),
@@ -23,15 +23,8 @@ export default defineConfig(() => ({
   server: {
     port: 3000,
   },
-  build: {
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        // 生产环境时移除console
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+  esbuild: {
+    drop: mode === 'production' ? ['console', 'debugger'] : [],
   },
   test: {
     environment: 'jsdom',

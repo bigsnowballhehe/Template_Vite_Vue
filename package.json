@@ -24,7 +24,6 @@
     "@vue-macros/reactivity-transform": "^0.2.5",
     "@vue/test-utils": "^2.3.2",
     "jsdom": "^21.1.1",
-    "terser": "^5.17.1",
     "typescript": "^5.0.4",
     "vite": "^4.3.3",
     "vitest": "^0.29.8",

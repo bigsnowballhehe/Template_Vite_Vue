@@ -5,9 +5,10 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "types": ["node"],
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "strict": true,
     "jsx": "preserve",
     "resolveJsonModule": true,

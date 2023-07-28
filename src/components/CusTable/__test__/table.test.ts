@@ -16,7 +16,7 @@ describe('SnTable.vue', () => {
     key1: 'key11value',
     key2: 'key22value',
   }]
-  //@ts-expect-error 能正常运行..ts就是报错,用法也没问题. https://test-utils.vuejs.org/api/#props
+  // @ts-expect-error 能正常运行..ts就是报错,用法也没问题. https://test-utils.vuejs.org/api/#props
   const wrapper = mount(SnTable, {
     props: {
       columns, values,
